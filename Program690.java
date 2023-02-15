@@ -1,0 +1,41 @@
+import java.util.*;
+
+class Pattern
+{
+    public int iRow = 0, iCol = 0, iCnt = 1;
+
+    public Pattern(int iNo1, int iNo2)
+    {
+        iRow = iNo1;
+        iCol = iNo2;
+    }
+
+    public void Pattern()
+    {
+        for(int i = 1; i <= iRow; i++)
+        {
+            for(int j = iCol; j > 0; j--)
+            {
+                System.out.print(j+"\t");
+            }
+            System.out.println();
+        }
+    }
+}
+
+class Program690
+{
+    public static void main(String arg[])
+    {
+        Scanner sobj = new Scanner(System.in);
+
+        System.out.println("Enter number of Rows : ");
+        int iNo1 = sobj.nextInt();
+
+        System.out.println("Enter number of Columns : ");
+        int iNo2 = sobj.nextInt();
+
+        Pattern pobj = new Pattern(iNo1,iNo2);
+        pobj.Pattern();
+    }
+}
